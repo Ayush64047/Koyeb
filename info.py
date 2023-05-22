@@ -39,7 +39,7 @@ JOIN_IMG = (environ.get('JOIN_IMG', 'https://telegra.ph/file/2718e562b65da275a7c
 # Admins, Log, Channels & Users
 ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '').split()]
 CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '').split()]
-auth_users = [int(user) if id_pattern.search(user) else user for user in environ.get('AUTH_USERS', '5259051520').split()]
+auth_users = [int(user) if id_pattern.search(user) else user for user in environ.get('AUTH_USERS', '').split()]
 AUTH_USERS = (auth_users) if auth_users else []
 auth_grp = environ.get('AUTH_GROUP')
 login_channel = environ.get('LOGIN_CHANNEL')
@@ -58,7 +58,7 @@ FILE_CHANNEL_LINK = environ.get('FILE_CHANNEL_LINK', 'https://t.me/+EsuevKcA21A1
 HRK_APP_NAME = environ.get('HRK_APP_NAME', 'mybots')
 HRK_API = environ.get('HRK_API', '0')
 
-#Downloader
+#Downloader 
 DOWNLOAD_LOCATION = environ.get("DOWNLOAD_LOCATION", "./DOWNLOADS/AudioBoT/")
 
 # This is required for the plugins involving the file system.
@@ -68,7 +68,7 @@ TMP_DOWNLOAD_DIRECTORY = environ.get("TMP_DOWNLOAD_DIRECTORY", "./DOWNLOADS/")
 COMMAND_HAND_LER = environ.get("COMMAND_HAND_LER", "/")
 
 # MongoDB information
-DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://heroku64047:heroku64047@cluster1.xxn3j5w.mongodb.net/?retryWrites=true&w=majority")
+DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://RoyalDwip:RoyalDwip@cluster0.0sp6pvf.mongodb.net/?retryWrites=true&w=majority")
 DATABASE_NAME = environ.get('DATABASE_NAME', "Cluster0")
 COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Telegram_Files')
 
@@ -84,7 +84,7 @@ GROUP_SUB = int(group_sub) if group_sub and id_pattern.search(group_sub) else No
 
 #Auto approve 
 CHAT_ID = [int(app_chat_id) if id_pattern.search(app_chat_id) else app_chat_id for app_chat_id in environ.get('CHAT_ID', '-1001529371079').split()]
-APPROVED = environ.get("APPROVED_WELCOME", "on").lower()
+APPROVED = environ.get("APPROVED_WELCOME", "off").lower()
 
 # Others
 VERIFY = bool(environ.get('VERIFY',True))
