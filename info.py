@@ -87,11 +87,11 @@ CHAT_ID = [int(app_chat_id) if id_pattern.search(app_chat_id) else app_chat_id f
 APPROVED = environ.get("APPROVED_WELCOME", "off").lower()
 
 # Others
-VERIFY = bool(environ.get('VERIFY',True))
+VERIFY = bool(environ.get('VERIFY',False))
 SHORTLINK_URL = environ.get('SHORTLINK_URL', 'shorturllink.in') #
 SHORTLINK_API = environ.get('SHORTLINK_API', '652e60db3da459d3f15dbb1775fa0aaf62b6ec4c') #
 IS_SHORTLINK = bool(environ.get('IS_SHORTLINK',False))
-NO_RESULTS_MSG = bool(environ.get('NO_RESULTS_MSG',False))
+NO_RESULTS_MSG = bool(environ.get('NO_RESULTS_MSG',True))
 DELETE_CHANNELS = [int(dch) if id_pattern.search(dch) else dch for dch in environ.get('DELETE_CHANNELS', '0').split()]
 MAX_B_TN = environ.get("MAX_B_TN", "10")
 MAX_BTN = is_enabled((environ.get('MAX_BTN', "False")), False)
